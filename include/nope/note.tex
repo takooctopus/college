@@ -1,0 +1,235 @@
+\chapter{图像的采集和处理}
+\section{表面图像提取的方法和研究}
+\subsection{图像的采集}
+
+\subsubsection{摄像机和光源的设置}
+\subsubsection{图像采集软件}
+
+\section{图像预处理}
+\subsection{噪声}
+\subsection{颜色的表达和转化}
+在计算机图像处理中，存在两类基本采样图像，即黑白的灰度图像和彩色图像，其中灰度图像为单通道图像，而彩色图像以三通道保存。黑白图像在数据矩阵中保存这一个对应于相机感受能量大小的采样结果，而彩色图像则保存有更多的信息。本课题在获取图像时，更应该获取彩色的图像。
+\subsubsection{灰色彩色图像的相互转化}
+\paragraph{灰度处理}
+普通彩色图像包含有三维的8位数据，一般的以RGB图像为例，我们要将其转化为单通道的8位灰度图像。一般的，有三种方式转化：
+
+我们以 $ Gray(x,y) $ 表示原图 $ (x,y) $ 点转化后的灰度图的强度，一般的，原图我们使用 $ RGB $ 来表示.
+
+\begin{enumerate}
+	\item 最大值法：以彩色图像的三个分量中的最大值作为我们灰度图的灰度值
+	\begin{equation}
+		Gray(x,y) = \max{R(x,y),G(x,y),B(x,y)}
+	\end{equation}
+	\item 平均值法：以彩色图像的三个分量的平均值作为我们灰度图的灰度值
+	\begin{equation}
+		Gray(x,y) = \frac{R(x,y)+G(x,y)+B(x,y)}{3}
+	\end{equation}
+	\item 加权平均值法：以彩色图像的三个分量的加权平均值作为我们灰度图的灰度值。由于人眼对于三原色的敏感度不同，我们对其有不同的权重。
+	\begin{equation}
+		Gray(x,y) = 0.299R(x,y)+ 0.578G(x,y)+ 0.114B(x,y)
+	\end{equation}
+\end{enumerate}
+
+\paragraph{彩色处理}
+在处理图像时，我们会涉及到统一图像的通道数的情况，在这时，我们需要将一维的但通道图片转换回原来的三通道图像。但由于单通道图像只有能量信息，我们不可能还原原来的各通道信息。为此，简单的，将能量信息简单地赋予原来各通道。即我们有:
+
+\begin{equation}
+	R(x,y) = G(x,y) = B(x,y) = Gray(x,y)
+\end{equation}
+
+\paragraph{伪彩色处理}
+灰度图像的大小对于人并不易识别，我们可以将图片根据其灰度大小赋予其色彩，但这种色彩并非其本来色彩，而是便于我们观察而赋予的。我们将灰度图像对应于 $ RGB $ 的三个通道上，下面有简单的公式对应于这个变换。
+
+$ [公式突然写不出来了(https://blog.csdn.net/huixingshao/article/details/42706699)] $
+
+
+\subsubsection{RGB-HSI色彩空间}
+
+我们除了RGB的色彩空间，还有很多其他不同的色彩空间。比如CMY/CMYK色彩空间、HSV/HSB色彩空间、HSI/HSL色彩空间、Lab色彩空间和YUV/YCbCr色彩空间。在OpenCV的使用中我们最常使用的是HSI色彩空间。
+
+\paragraph{RGB色彩空间}
+任何基于RGB颜色模型的加色色彩空间都属于RGB色彩空间。[Digital Video and HDTV Algorithms and Interfaces]其由红绿蓝三原色的色度定义%[Hunt, R. W. G. The Reproduction of Colour (6th ed.). Chichester UK: Wiley–IS&T Series in Imaging Science and Technology. 2004. ISBN 0-470-02425-9]
+
+当前在计算机硬件中采取每一象素用24比特表示的方法，三种原色光各分到8比特，每个原色的强度依照8比特的取值能够最多分成 $ 2^8 = 256 $ 个值，即其区间为 $ (0-255) $ 
+
+RGB颜色模型的几何表示被映射一个正方体，三边依次为RGB轴，并能够以此画出各区域的颜色。采用欧式空间中普通笛卡尔坐标系，将原点 $ (0,0,0) $ 设置成黑色，而最远端 $ (1,1,1) $ 处为白色。偶尔的，在24比特后我们还会增加8比特用于表示图像的透明度。
+
+[此处有RGB的图片]
+
+我们知道RGB原理由于生理原因造成的，人的眼睛内有几种辨别颜色的锥形感光细胞，如果感受到的刺激略大于辨别绿色的细胞，人的感觉是黄色；如果辨别黄绿色的细胞受到的刺激大大高于辨别绿色的细胞，人的感觉是红色。而由于伽马矫正的原因，计算机上颜色输出的强度并非正比于图像文件中的 $ RGB $ 值，这并不那么适合计算机的处理。由此引出了HSI颜色模型.
+
+\paragraph{HSI色彩空间}
+
+HSI颜色模型用色调、饱和度和亮度来描述物体的颜色。以H描述颜色的波长(色调)，以S表示颜色的深浅(饱和度)，以I表示颜色的亮度(强度)。
+
+我们使用圆锥体来表示这个彩色空间，色调H即中心底面的角度 $ \theta $，反映其最接近的光的波长。以 $ 0{}^o $ 为红色， $ 120{}^o $ 为绿色， $ 240{}^o $ 为蓝色。而饱和度S则以中心圆的半径来表示，中心为灰色，最外圈为纯色，数值为 $ 1 $ 。而亮度I则是圆锥的高度，即其中色点到底面的距离，表示其能量。
+
+[此处有HSI模型图片]
+
+HSI模型从人的视觉系统出发，反映了人的色彩感知方式。其可以从彩色图像的携带信息中去掉强度分量的影响，也更易与我们处理图像算法。
+
+\paragraph{RGB-HSI的转换}
+
+我们从上面的模型中可以看到HSI中的各个分量均在RGB空间中有所体现，由此我们可以简单地将RGB色彩空间映射到HSI色彩空间中。
+
+我们有几种算法做到这个映射，即几何推导法、坐标变换法、分段定义法、Bajon近似法和标准模型法，虽然几何推导法的对转换时间有一定的要求，但由于对图像的处理只需要O(n)次，且其映射能力也较其他几种方法有更好的性能，因此我们只介绍几何推导法。
+
+我们有：
+
+\begin{enumerate}
+\item 色调H
+
+\begin{equation}
+	\label{}
+	H =\left\{
+		\begin{aligned}
+		& \Theta, & G \geq B \\
+		& 2 \pi - \Theta, & G \le B \\
+		\end{aligned}
+		\right.
+	where \quad \theta = cos^{-1}(\frac{(R-G)+(R-B)}{s\sqrt{(R-G)^{2}+(R-B)(G-B)}})
+\end{equation}
+
+\item 饱和度S
+\begin{equation}
+	S = 1 - \frac{3}{R+G+B} [\min(R,G,B)]
+\end{equation}
+
+\item 强度I
+\begin{equation}
+	I = \frac{1}{3}(R+G+B)
+\end{equation}
+\end{enumerate}
+
+\subsection{提取表面区域}
+对于表面缺陷进行快速检测，我们希望尽可能快的筛选出没有缺陷的区域图像，因此预处理是十分必要的。尽可能得到边缘信息、轮廓信息和对比度等所需信息。
+\subsubsection{图像增强}
+图像增强就是一种能够很好地突出图像的可辨识度的策略。其能够突出图像中的有用信息，削弱图像中的无用信息。
+而图像增强算法也在空间域、频域、对比度、照度方面分别有其各自的着重点。
+\paragraph{直方图均衡算法}
+最标准的直方图均匀算法是以概率的累计分布映射原始图像到新的均匀分布的增强图像上。
+
+以灰度图为例，图上点(i,j)处的灰度值 $ Gray(x,y) $ 等于其处的强度值 $ I(x,y) $， 我们将整个光强设为L个灰度级。
+
+即我们有 $ I(i,j) \in [0,L-1] $ ，此时我们有对应的灰度级k的概率密度函数 $ p(k) $ :
+
+\begin{equation}
+	p(k) = \frac{n_k}{N},(k=0,1,\cdots,L-1)
+\end{equation}
+
+而我们有灰度级k处的累计分布函数 $ c(k) $ :
+
+\begin{equation}
+	c(k) = \sum_{i=0}^{i=k} p(i), (k = 0,1,\cdots,L-1)
+\end{equation}
+
+最后，我们将原始图像映射到对应的近似均匀分布级上：
+
+\begin{equation}
+	f(k) = (L-1) \cdot c(k)
+\end{equation}
+
+上面的直方图均衡算法虽然能自动增强整个图像的对比度，使得其更为平坦也更为均匀，但增强效果的稳定性不尽如人意，我们需要一种全局化更为均匀的直方图均匀算法。
+
+而对于其的改进也有许多。
+
+\begin{enumerate}
+	\item BBHE算法：以原始图像G的亮度均值作为阈值，将原始图像分化为两个子图 $ G_L $ 和 $ G_U $ ，保证其子图互补，再以此分别进行直方图均衡。
+	\item 等面积双直方图均衡(DSIHE)算法：同上面相似，但是两个子图是面积相同的[这儿存疑]
+	\item 最大亮度双直方图均衡(MMBEBHE)算法：选取阈值使得新旧图像的亮度均值最小
+	\item 对数函数映射的直方图均衡(LMHE)算法：以对数函数$ f_{lg}(k) $ 作为累计分布函数
+	\begin{equation}
+		f_{lg}(k) = \frac{lg[k \times (\lambda - 1) + 1]}{lg[(L-1) \times (\lambda-1) +1 ]}
+	\end{equation}
+	\item 二维空域信息熵的直方图均衡(SEHE)算法：将图像划分为 $ M \times N $ 个子区域，分别计算其灰度级概率密度 $ h_k $ ，再计算哥哥灰度级在总区域中的信息熵之和
+	\begin{equation}
+		S_k = -\sum^{M}_{m=1} \sum^{N}_{n=1} h_k(m,n)log_2[h_k(m,n)]
+	\end{equation}
+	由此获得各个灰度级信息熵占的归一化概率：
+	\begin{equation}
+		f_k = \frac{S_k}{\sum^{L-1}_{j=0,j \neq k} S_j}
+	\end{equation}
+	由此获得其累计分布函数：
+	\begin{equation}
+		c_k = \sum^{k}_{i=0}f_i
+	\end{equation}
+\end{enumerate}
+
+\paragraph{小波变换图像增强算法}
+我们在此引入小波函数系：
+\begin{equation}
+	f(x) = \sum_{k}c_{j0}(k)\phi_{j0,k}(x) + \sum_{j=j_0}^{\infty}\sum_{k}d_j(k)\Phi_{j,k}(x)
+\end{equation}
+
+其中， $ \Phi(x) $ 为小波函数， $ \phi(x) $ 为尺度函数 ， $ d_j(k) $ 是尺度系数，而 $ c_{j0}(k) $ 为小波系数。
+
+小波变换将离散二维信号图像分成了1个低通子图像和3个高通子图像。分别对应于图像中平滑区域和细节区域。而高通图像分别包括了水平、垂直和对角的细节图像。
+
+我们对于原始图像的小波分解后对其小波系数进行非线性的增强操作：
+
+\begin{equation}
+	\label{}
+	W_o =\left\{
+		\begin{aligned}
+		& W_i+G \times (T-1) , & W_i \ge T \\
+		& G \times W_i , & \lvert W_i \rvert \leq T \\
+		& W_i+G \times (T-1) , & W_i \le -T \\
+		\end{aligned}
+		\right.
+\end{equation}
+
+\paragraph{偏微分方程图像增强算法}
+对于图像G和G'，我们设其对比度场分别为 $ V_{G}(p) $ 和 $ V_{G'}(p) $ ，其每一点上的梯度方向都相同，但G'有更大的倍数，我们就认为图G'是图G的增强图像。
+我们将这种关系表示为：
+
+\begin{equation}
+	V_{G'}(p) = k \cdot V_{G}(p) + \phi	
+\end{equation}
+
+这个方程是线性的，要增强，k必定大于1,但这个同时也会放大噪声。一般的，增强图像会有相对的偏置 $ \phi $ 。
+
+明显的，方程需要有相关的约束才可以求解，我们将其化为下面的求解式：
+
+\begin{equation}
+	\mathop{\arg\min}_{f(p)\in[0,255], p \in \Omega} \iint_{\Omega} \lvert \nabla f(p) - V_{G'} \rvert ^{2} d\Omega
+\end{equation}
+
+\paragraph{Retinex图像增强算法}
+Retinex图像增强 理论认为图像G是由反射分量 $ R_{i,j} $ 和照度分量 $ L(i,j) $ 的乘积。
+
+即有：
+
+\begin{equation}
+	I(i,j) = R(i,j) \times L(i,j)
+\end{equation}
+
+而R和L分别表示了物体本身的颜色即所称的高频部分，以及环境的亮度，即低频部分。观察式子不难发现这个在对数域下能够更好的工作：
+
+\begin{equation}
+	\lg I(i,j) = \lg R(i,j) + \lg L(i,j)
+\end{equation}
+
+我们将R单独分离出来：
+
+\begin{equation}
+	\lg R(i,j) = \lg I(i,j) - \lg L(i,j)
+\end{equation}
+
+而单独的低频分量L则是：
+
+\begin{equation}
+	L(i,j) = I(i,j) \ast F(i,j)
+\end{equation}
+
+其中 $ F(i,j) $ 是高斯中心环绕函数:
+
+\begin{equation}
+	F(i,j) = Ke^{-\frac{-r^2}{c^2}}
+\end{equation}
+
+
+\subsubsection{边缘检测}
+\subsubsection{形态学处理}
+\subsubsection{轮廓处理}
+
+\section{表面缺陷提取的方法和研究}

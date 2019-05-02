@@ -1,0 +1,35 @@
+% !Mode:: "TeX:UTF-8"
+
+\titlecontents{chapter}[2em]{\vspace{.5\baselineskip}\xiaosan\song}
+             {\prechaptername\CJKnumber{\thecontentslabel}\postchaptername\qquad}{}
+             {}             % 设置该选项为空是为了不让目录中显示页码
+\addcontentsline{toc}{chapter}{中文译文}
+\setcounter{page}{1}            % 单独从 1 开始编页码
+\markboth{中文译文}{中文译文}   % 用于将章节号添加到页眉中
+\chapter*{中文译文}
+
+\trtitle{推荐系统(RS)简述}
+
+推荐系统(RS)简述
+现在个人信息量爆炸，推荐系统可以有效的过滤并向人推荐其所喜欢的东西。
+
+其一般被分作三类：
+
+collaborative filtering 协同过滤
+
+content-based recommender system 基于内容的推荐系统
+
+hybrid recommender system based on the types of input data 基于输入数据的混合的推荐系统
+
+但其都有各自的问题，譬如稀疏性、冷启动，以及其不同评价指标下的推荐性能 
+
+关于深度学习在RS中的运用
+公司案例
+
+Netflix
+Youtube 
+Google Play 
+Yahoo News 
+研究领域内
+
+RecSys
