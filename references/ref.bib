@@ -1,278 +1,844 @@
-% Encoding: UTF-8
+% !Mode:: "TeX:UTF-8"
 
-@article{tikhe2014metal,
-  title={Metal surface inspection for defect detection and classification using Gabor filter},
-  author={Tikhe, Chaitali and Chitode, JS},
-  journal={International Journal of Innovative Research in Science, Engineering and Technology},
-  volume={3},
-  number={6},
-  pages={13702--9},
+@article{doi:101061,
+author = {Mahmoud R. Halfawy  and Jantira Hengmeechai },
+title = {Efficient Algorithm for Crack Detection in Sewer Images from Closed-Circuit Television Inspections},
+journal = {Journal of Infrastructure Systems},
+volume = {20},
+number = {2},
+pages = {04013014},
+year = {2014},
+doi = {101061}
+
+URL = {https://ascelibrary.org/doi/abs/10.1061/%28ASCE%29IS.1943-555X.0000161},
+eprint = {https://ascelibrary.org/doi/pdf/10.1061/%28ASCE%29IS.1943-555X.0000161}
+,
+    abstract = { This paper presents a new algorithm for automated crack detection in sewer inspection closed-circuit television (CCTV) images. Cracks often have a long and thin rectangular shape with a darker appearance relative to other components in the image; therefore, they typically manifest as edges. The proposed algorithm exploits previous information on the visual characteristics of crack features in typical CCTV images to efficiently identify actual cracks and filter out background noise. The algorithm consists of three main steps. The first preprocessing step prepares the CCTV image for crack detection by identifying a set of candidate crack fragments using the Sobel method to detect horizontal and vertical edges separately. The Hough transform is then used to identify and remove the edges associated with information labels typically found in CCTV images. The second step applies a set of morphological operations to enhance candidate crack segments by filling the gaps between closely adjacent and aligned edges. The enhancement step results in merging crack fragments that potentially represent segments of the same crack curve. In the third step, two filters are defined based on previous knowledge of the visual characteristics of cracks, and then applied to remove noise edges and extract a set of real crack segments. We tested the proposed algorithm on a set of CCTV videos obtained from the cities of Regina and Calgary in Canada. The experimental results demonstrated the efficiency of the proposed algorithm, and showed its robustness in detecting various patterns of sewer cracks. }
+}
+
+@article{koch2015review,
+  title={A review on computer vision based defect detection and condition assessment of concrete and asphalt civil infrastructure},
+  author={Koch, Christian and Georgieva, Kristina and Kasireddy, Varun and Akinci, Burcu and Fieguth, Paul},
+  journal={Advanced Engineering Informatics},
+  volume={29},
+  number={2},
+  pages={196--210},
+  year={2015},
+  publisher={Elsevier}
+}
+
+@techreport{operations2015evaluation,
+  title={Evaluation (TOMIE) Manual},
+  author={Operations, Tunnel and Maintenance, Inspection},
+  year={2015},
+  institution={Publication FHWA-HIF-15-005. Office of Bridges and Structures, FHWA}
+}
+
+@inproceedings{varadharajan2014vision,
+  title={Vision for road inspection},
+  author={Varadharajan, Srivatsan and Jose, Sobhagya and Sharma, Karan and Wander, Lars and Mertz, Christoph},
+  booktitle={IEEE Winter Conference on Applications of Computer Vision},
+  pages={115--122},
+  year={2014},
+  organization={IEEE}
+}
+
+@article{ZOU2012227,
+title = "CrackTree: Automatic crack detection from pavement images",
+journal = "Pattern Recognition Letters",
+volume = "33",
+number = "3",
+pages = "227 - 238",
+year = "2012",
+issn = "0167-8655",
+doi = "https://doi.org/10.1016/j.patrec.2011.11.004",
+url = "http://www.sciencedirect.com/science/article/pii/S0167865511003795",
+author = "Qin Zou and Yu Cao and Qingquan Li and Qingzhou Mao and Song Wang",
+keywords = "Crack detection, Edge detection, Edge grouping, Tensor voting, Shadow removal",
+abstract = "Pavement cracks are important information for evaluating the road condition and conducting the necessary road maintenance. In this paper, we develop CrackTree, a fully-automatic method to detect cracks from pavement images. In practice, crack detection is a very challenging problem because of (1) low contrast between cracks and the surrounding pavement, (2) intensity inhomogeneity along the cracks, and (3) possible shadows with similar intensity to the cracks. To address these problems, the proposed method consists of three steps. First, we develop a geodesic shadow-removal algorithm to remove the pavement shadows while preserving the cracks. Second, we build a crack probability map using tensor voting, which enhances the connection of the crack fragments with good proximity and curve continuity. Finally, we sample a set of crack seeds from the crack probability map, represent these seeds by a graph model, derive minimum spanning trees from this graph, and conduct recursive tree-edge pruning to identify desirable cracks. We evaluate the proposed method on a collection of 206 real pavement images and the experimental results show that the proposed method achieves a better performance than several existing methods."
+}
+
+@inproceedings{nguyen2009automatic,
+  title={Automatic detection and classification of defect on road pavement using anisotropy measure},
+  author={Nguyen, Tien Sy and Avila, Manuel and Begot, St{\'e}phane},
+  booktitle={2009 17th European Signal Processing Conference},
+  pages={617--621},
+  year={2009},
+  organization={IEEE}
+}
+
+@techreport{rose2014supervised,
+  title={Supervised computer-vision-based sensing of concrete bridges for crack-detection and assessment},
+  author={Rose, Paden and Aaron, Bryant and Tamir, Dan E and Lu, Lucy and Hu, Jiong and Shi, Hongchi},
   year={2014}
 }
 
-@inproceedings{timm2011non,
-  title={Non-parametric texture defect detection using Weibull features},
-  author={Timm, Fabian and Barth, Erhardt},
-  booktitle={Image Processing: Machine Vision Applications IV},
-  volume={7877},
-  pages={78770J},
-  year={2011},
-  organization={International Society for Optics and Photonics}
+@article{doi101080,
+author = { Mohammad R.   Jahanshahi  and  Jonathan S.   Kelly  and  Sami F.   Masri  and  Gaurav S.   Sukhatme },
+title = {A survey and evaluation of promising approaches for automatic image-based defect detection of bridge structures},
+journal = {Structure and Infrastructure Engineering},
+volume = {5},
+number = {6},
+pages = {455-486},
+year  = {2009},
+publisher = {Taylor & Francis},
+doi = {10.1080/15732470801945930},
+
+URL = { 
+        https://doi.org/10.1080/15732470801945930
+},
+eprint = { 
+        https://doi.org/10.1080/15732470801945930
+    
+}
 }
 
-@article{wang2004image,
-  title={Image quality assessment: from error visibility to structural similarity},
-  author={Wang, Zhou and Bovik, Alan C and Sheikh, Hamid R and Simoncelli, Eero P},
-  journal={IEEE transactions on image processing},
-  volume={13},
-  number={4},
-  pages={600--612},
-  year={2004},
-  publisher={IEEE}
+@article{doi101061,
+author = {Ikhlas Abdel-Qader  and Osama Abudayyeh  and Michael E. Kelly },
+title = {Analysis of Edge-Detection Techniques for Crack Identification in Bridges},
+journal = {Journal of Computing in Civil Engineering},
+volume = {17},
+number = {4},
+pages = {255-263},
+year = {2003},
+doi = {10.1061/(ASCE)0887-3801(2003)17:4(255)}
+
+URL = {https://ascelibrary.org/doi/abs/10.1061/%28ASCE%290887-3801%282003%2917%3A4%28255%29},
+eprint = {https://ascelibrary.org/doi/pdf/10.1061/%28ASCE%290887-3801%282003%2917%3A4%28255%29}
+,
+    abstract = { Bridge monitoring and maintenance is an expensive yet essential task in maintaining a safe national transportation infrastructure. Traditional monitoring methods use visual inspection of bridges on a regular basis and often require inspectors to travel to the bridge of concern and determine the deterioration level of the bridge. Automation of this process may result in great monetary savings and can lead to more frequent inspection cycles. One aspect of this automation is the detection of cracks and deterioration of a bridge. This paper provides a comparison of the effectiveness of four crack-detection techniques: fast Haar transform (FHT), fast Fourier transform, Sobel, and Canny. These imaging edge-detection algorithms were implemented in MatLab and simulated using a sample of 50 concrete bridge images (25 with cracks and 25 without). The results show that the FHT was significantly more reliable than the other three edge-detection techniques in identifying cracks.  }
 }
 
-@inproceedings{miura2012high,
-  title={High-accuracy image matching using phase-only correlation and its application},
-  author={Miura, Mamoru and Sakai, Shuji and Aoyama, Shoichiro and Ishii, Jumpei and Ito, Koichi and Aoki, Takafumi},
-  booktitle={SICE Annual Conference (SICE), 2012 Proceedings of},
-  pages={307--312},
-  year={2012},
-  organization={IEEE}
+@Article{Yamaguchi2010,
+author="Yamaguchi, Tomoyuki
+and Hashimoto, Shuji",
+title="Fast crack detection method for large-size concrete surface images using percolation-based image processing",
+journal="Machine Vision and Applications",
+year="2010",
+month="Aug",
+day="01",
+volume="21",
+number="5",
+pages="797--809",
+abstract="The detection of cracks on concrete surfaces is the most important step during the inspection of concrete structures. Conventional crack detection methods are performed by experienced human inspectors who sketch crack patterns manually; however, such detection methods are expensive and subjective. Therefore, automated crack detection techniques that utilize image processing have been proposed. Although most the image-based approaches focus on the accuracy of crack detection, the computation time is also important for practical applications because the size of digital images has increased up to 10 megapixels. We introduce an efficient and high-speed crack detection method that employs percolation-based image processing. We propose termination- and skip-added procedures to reduce the computation time. The percolation process is terminated by calculating the circularity during the processing. Moreover, percolation processing can be skipped in subsequent pixels according to the circularity of neighboring pixels. The experimental result shows that the proposed approach efficiently reduces the computation cost.",
+issn="1432-1769",
+doi="10.1007/s00138-009-0189-8",
+url="https://doi.org/10.1007/s00138-009-0189-8"
 }
 
-@article{song1995texture,
-  title={Texture crack detection},
-  author={Song, Keng Yew and Petrou, Maria and Kittler, Josef},
-  journal={Machine Vision and Applications},
-  volume={8},
-  number={1},
-  pages={63--75},
-  year={1995},
-  publisher={Springer}
-}
-
-@article{suvdaa2012steel,
-  title={Steel surface defects detection and classification using SIFT and voting strategy},
-  author={Suvdaa, B and Ahn, J and Ko, J},
-  journal={Int J Softw Eng Appl},
-  volume={6},
-  number={2},
-  pages={161--165},
-  year={2012},
-  publisher={Citeseer}
-}
-
-@article{lowe2004distinctive,
-  title={Distinctive image features from scale-invariant keypoints},
-  author={Lowe, David G},
-  journal={International journal of computer vision},
-  volume={60},
-  number={2},
-  pages={91--110},
-  year={2004},
-  publisher={Springer}
-}
-
-@inproceedings{du2009face,
-  title={Face recognition using SURF features},
-  author={Du, Geng and Su, Fei and Cai, Anni},
-  booktitle={MIPPR 2009: Pattern Recognition and Computer Vision},
-  volume={7496},
-  pages={749628},
-  year={2009},
-  organization={International Society for Optics and Photonics}
-}
-
-@article{cha2017deep,
-  title={Deep learning-based crack damage detection using convolutional neural networks},
-  author={Cha, Young-Jin and Choi, Wooram and B{\"u}y{\"u}k{\"o}zt{\"u}rk, Oral},
-  journal={Computer-Aided Civil and Infrastructure Engineering},
-  volume={32},
-  number={5},
-  pages={361--378},
-  year={2017},
-  publisher={Wiley Online Library}
-}
-
-@inproceedings{krizhevsky2012imagenet,
-  title={Imagenet classification with deep convolutional neural networks},
-  author={Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
-  booktitle={Advances in neural information processing systems},
-  pages={1097--1105},
-  year={2012}
-}
-
-@article{dey2017signet,
-  title={SigNet: Convolutional Siamese network for writer independent offline signature verification},
-  author={Dey, Sounak and Dutta, Anjan and Toledo, J Ignacio and Ghosh, Suman K and Llad{\'o}s, Josep and Pal, Umapada},
-  journal={arXiv preprint arXiv:1707.02131},
-  year={2017}
-}
-
-@article{hoo2016deep,
-  title={Deep convolutional neural networks for computer-aided detection: CNN architectures, dataset characteristics and transfer learning},
-  author={Hoo-Chang, Shin and Roth, Holger R and Gao, Mingchen and Lu, Le and Xu, Ziyue and Nogues, Isabella and Yao, Jianhua and Mollura, Daniel and Summers, Ronald M},
-  journal={IEEE transactions on medical imaging},
-  volume={35},
-  number={5},
-  pages={1285},
-  year={2016},
-  publisher={NIH Public Access}
-}
-
-@article{GLASS19981075,
-title = "Hybrid artificial neural network segmentation and classification of dynamic contrast-enhanced MR imaging (DEMRI) of osteosarcoma",
-journal = "Magnetic Resonance Imaging",
-volume = "16",
-number = "9",
-pages = "1075 - 1083",
-year = "1998",
-issn = "0730-725X",
-doi = "https://doi.org/10.1016/S0730-725X(98)00137-4",
-url = "http://www.sciencedirect.com/science/article/pii/S0730725X98001374",
-author = "John O Glass and Wilburn E Reddick",
-keywords = "Image segmentation and classification, Osteosarcoma, Tumor response",
-abstract = "The evaluation of pediatric osteosarcoma has suffered from the lack of an accurate imaging measure of response. One major problem is that osteosarcoma do not shrink in response to chemotherapy; instead, viable tumor is replaced by necrotic tissue. Currently available techniques that use dynamic contrast-enhanced magnetic resonance imaging to quantitatively evaluate tumor response fail to assess the percentage of necrosis. At present, histopathologic evaluation of resected tissue is the only means of measuring the percentage of necrosis in treated osteosarcoma. The current study presents a non-invasive method to visualize necrotic and viable tumor and quantitatively assess the response of osteosarcoma. Our technique uses a hybrid neural network consisting of a Kohonen self-organizing map to segment dynamic contrast-enhanced magnetic resonance images and a multilayer backpropagation neural network to classify the segmented images. Because the hybrid neural network is completely automated, our technique removes both inter- and intra-operator error. An analysis comparing the percentage of necrosis from our technique to the histopathologic analysis revealed a highly significant Spearman correlation coefficient of 0.617 with p < 0.001."
-}
-
-@article{dekruger1994image,
-  title={Image processing and neural networks for recognition of cartographic area features},
-  author={DeKruger, David and Hunt, Bobby R},
-  journal={Pattern Recognition},
-  volume={27},
-  number={4},
-  pages={461--483},
-  year={1994},
+@article{abdel2006pca,
+  title={PCA-based algorithm for unsupervised bridge crack detection},
+  author={Abdel-Qader, Ikhlas and Pashaie-Rad, Sara and Abudayyeh, Osama and Yehia, Sherif},
+  journal={Advances in Engineering Software},
+  volume={37},
+  number={12},
+  pages={771--778},
+  year={2006},
   publisher={Elsevier}
 }
 
-@article{sukissian1994adaptive,
-  title={Adaptive classification of textured images using linear prediction and neural networks},
-  author={Sukissian, Levon and Kollias, Stefanos and Boutalis, Yiannis},
-  journal={Signal processing},
-  volume={36},
-  number={2},
-  pages={209--232},
-  year={1994},
-  publisher={Elsevier}
+@article{doi0000257,
+author = {David Lattanzi  and Gregory R. Miller },
+title = {Robust Automated Concrete Damage Detection Algorithms for Field Applications},
+journal = {Journal of Computing in Civil Engineering},
+volume = {28},
+number = {2},
+pages = {253-262},
+year = {2014},
+doi = {10.1061/(ASCE)CP.1943-5487.0000257}
+
+URL = {https://ascelibrary.org/doi/abs/10.1061/%28ASCE%29CP.1943-5487.0000257},
+eprint = {https://ascelibrary.org/doi/pdf/10.1061/%28ASCE%29CP.1943-5487.0000257}
+,
+    abstract = { This paper presents a computer vision framework supporting automated infrastructure damage detection, with a specific focus on surface crack detection in concrete. The approach presented is designed to provide a significant increase in robustness relative to existing methods when faced with widely varying field conditions while operating fast enough to be used in large scale applications. In particular, a clustering method for segmentation is developed that exploits inherent characteristics of fracture images to achieve consistent performance, combined with robust feature extraction to improve recognition algorithm classifier outcomes. The approach is shown to perform well in detecting cracks across a broad range of surface and lighting conditions, which can cause existing techniques to exhibit significant reductions in detection accuracy and/or detection speed. }
 }
 
-@article{ghosal1995range,
-  title={Range surface characterization and segmentation using neural networks},
-  author={Ghosal, Sugata and Mehrotra, Rajiv},
-  journal={Pattern Recognition},
-  volume={28},
-  number={5},
-  pages={711--727},
-  year={1995},
-  publisher={Elsevier}
-}
-
-@article{tsao1993constraint,
-  title={Constraint satisfaction neural networks for image recognition},
-  author={Tsao, Eric Chen-Kuo and Lin, Wei-Chung and Chen, Chin-Tu},
-  journal={Pattern Recognition},
-  volume={26},
-  number={4},
-  pages={553--567},
-  year={1993},
-  publisher={Elsevier}
-}
-
-@article{bors1998optical,
-  title={Optical flow estimation and moving object segmentation based on median radial basis function network},
-  author={Bors, Adrian G and Pitas, Ioannis},
-  journal={IEEE Transactions on Image Processing},
-  volume={7},
-  number={5},
-  pages={693--702},
-  year={1998},
-  publisher={IEEE}
-}
-
-@article{raghu1997unsupervised,
-  title={Unsupervised texture classification using vector quantization and deterministic relaxation neural network},
-  author={Raghu, PP and Poongodi, R and Yegnanarayana, B},
-  journal={IEEE Transactions on Image Processing},
-  volume={6},
-  number={10},
-  pages={1376--1387},
-  year={1997},
-  publisher={IEEE}
-}
-
-@incollection{toulson1991segmentation,
-  title={Segmentation of MR images using neural nets},
-  author={Toulson, DL and Boyce, James F},
-  booktitle={BMVC91},
-  pages={284--292},
-  year={1991},
-  publisher={Springer}
-}
-
-@article{haring1994kohonen,
-  title={Kohonen networks for multiscale image segmentation},
-  author={Haring, S and Viergever, Max A and Kok, Joost N},
-  journal={Image and vision computing},
-  volume={12},
-  number={6},
-  pages={339--344},
-  year={1994},
-  publisher={Elsevier}
-}
-
-@article{egmont1999detection,
-  title={Detection of bone tumours in radiographic images using neural networks},
-  author={Egmont-Petersen, Michael and Pelikan, Erich},
-  journal={Pattern Analysis \& Applications},
-  volume={2},
-  number={2},
-  pages={172--183},
-  year={1999},
-  publisher={Springer}
-}
-
-@article{laine1993texture,
-  title={Texture classification by wavelet packet signatures},
-  author={Laine, Andrew and Fan, Jian},
-  journal={IEEE Transactions on pattern analysis and machine intelligence},
-  volume={15},
-  number={11},
-  pages={1186--1191},
-  year={1993},
-  publisher={IEEE}
-}
-
-@inproceedings{ibrahim2002analysis,
-  title={Analysis of the wavelet-based image difference algorithm for PCB inspection},
-  author={Ibrahim, Zuwairie and Al-Attas, SAR and Aspar, Zulfakar},
-  booktitle={SICE 2002. Proceedings of the 41st SICE Annual Conference},
-  volume={4},
-  pages={2108--2113},
-  year={2002},
-  organization={IEEE}
-}
-
-@article{moganti1996automatic,
-  title={Automatic PCB inspection algorithms: a survey},
-  author={Moganti, Madhav and Ercal, Fikret and Dagli, Cihan H and Tsunekawa, Shou},
-  journal={Computer vision and image understanding},
-  volume={63},
-  number={2},
-  pages={287--313},
-  year={1996},
-  publisher={Citeseer}
-}
-
-@article{tsai2012shift,
-  title={A shift-tolerant dissimilarity measure for surface defect detection},
-  author={Tsai, Du-Ming and Chiang, I-Yung and Tsai, Ya-Hui},
+@article{win2015contrast,
+  title={A contrast adjustment thresholding method for surface defect detection based on mesoscopy},
+  author={Win, Moe and Bushroa, AR and Hassan, MA and Hilman, NM and Ide-Ektessabi, Ari},
   journal={IEEE Transactions on Industrial Informatics},
-  volume={8},
-  number={1},
-  pages={128--137},
-  year={2012},
+  volume={11},
+  number={3},
+  pages={642--649},
+  year={2015},
   publisher={IEEE}
 }
 
-@Comment{jabref-meta: databaseType:bibtex;}
+@article{Kittler:1986:MET:2035720363,
+ author = {Kittler, J. and Illingworth, J.},
+ title = {Minimum Error Thresholding},
+ journal = {Pattern Recogn.},
+ issue_date = {Jan./Feb. 1986},
+ volume = {19},
+ number = {1},
+ month = jan,
+ year = {1986},
+ issn = {0031-3203},
+ pages = {41--47},
+ numpages = {7},
+ url = {http://dx.doi.org/10.1016/0031-3203(86)90030-0},
+ doi = {10.1016/0031-3203(86)90030-0},
+ acmid = {20363},
+ publisher = {Elsevier Science Inc.},
+ address = {New York, NY, USA},
+} 
+
+@article{Buck2013,
+author = {Buck, Christoph and Bürger, Fabian and Herwig, Johannes and Thurau, Matthias},
+year = {2013},
+month = {01},
+pages = {1927-1935},
+title = {Rapid Inclusion and Defect Detection System for Large Steel Volumes},
+volume = {53},
+journal = {ISIJ International},
+doi = {10.2355/isijinternational.53.1927}
+}
+
+@ARTICLE{7864335, 
+author={R. {Ren} and T. {Hung} and K. C. {Tan}}, 
+journal={IEEE Transactions on Cybernetics}, 
+title={A Generic Deep-Learning-Based Approach for Automated Surface Inspection}, 
+year={2018}, 
+volume={48}, 
+number={3}, 
+pages={929-940}, 
+keywords={feature extraction;image classification;image segmentation;inspection;learning (artificial intelligence);production engineering computing;generic deep-learning;automated surface inspection;image patches;trained classifier;segmentation task;image classification;defect segmentation;Feature extraction;Training;Heating;Inspection;Surface morphology;Computer vision;Object recognition;Automated surface inspection (ASI);deep learning (DL);feature transferring;segmentation}, 
+doi={10.1109/TCYB.2017.2668395}, 
+ISSN={2168-2267}, 
+month={March},}
+
+
+@article{doi:1010610000051,
+author = {Yi-Chang Tsai  and Vivek Kaul  and Russell M. Mersereau },
+title = {Critical Assessment of Pavement Distress Segmentation Methods},
+journal = {Journal of Transportation Engineering},
+volume = {136},
+number = {1},
+pages = {11-19},
+year = {2010},
+doi = {10.1061/(ASCE)TE.1943-5436.0000051}
+
+URL = {https://ascelibrary.org/doi/abs/10.1061/%28ASCE%29TE.1943-5436.0000051},
+eprint = {https://ascelibrary.org/doi/pdf/10.1061/%28ASCE%29TE.1943-5436.0000051}
+,
+    abstract = { Image segmentation is the crucial step in automatic image distress detection and classification (e.g., types and severities) and has important applications for automatic crack sealing. Although many researchers have developed pavement distress detection and recognition algorithms, full automation has remained a challenge. This is the first paper that uses a scoring measure to quantitatively and objectively evaluate the performance of six different segmentation algorithms. Up-to-date research on pavement distress detection and segmentation is comprehensively reviewed to identify the research need. Six segmentation methods are then tested using a diverse set of actual pavement images taken on interstate highway I-75/I-85 near Atlanta and provided by the Georgia Department of Transportation with varying lighting conditions, shadows, and crack positions to differentiate their performance. The dynamic optimization-based method, which was previously used for segmenting low signal-to-noise ratio (SNR) digital radiography images, outperforms the other five methods based on our scoring measure. It is robust to image variations in our data set but the computation time required is high. By critically assessing the strengths and limitations of the existing algorithms, the paper provides valuable insight and guideline for future algorithm development that are important in automating image distress detection and classification. }
+}
+
+@Article{Yamaguchi2010,
+author="Yamaguchi, Tomoyuki
+and Hashimoto, Shuji",
+title="Fast crack detection method for large-size concrete surface images using percolation-based image processing",
+journal="Machine Vision and Applications",
+year="2010",
+month="Aug",
+day="01",
+volume="21",
+number="5",
+pages="797--809",
+abstract="The detection of cracks on concrete surfaces is the most important step during the inspection of concrete structures. Conventional crack detection methods are performed by experienced human inspectors who sketch crack patterns manually; however, such detection methods are expensive and subjective. Therefore, automated crack detection techniques that utilize image processing have been proposed. Although most the image-based approaches focus on the accuracy of crack detection, the computation time is also important for practical applications because the size of digital images has increased up to 10 megapixels. We introduce an efficient and high-speed crack detection method that employs percolation-based image processing. We propose termination- and skip-added procedures to reduce the computation time. The percolation process is terminated by calculating the circularity during the processing. Moreover, percolation processing can be skipped in subsequent pixels according to the circularity of neighboring pixels. The experimental result shows that the proposed approach efficiently reduces the computation cost.",
+issn="1432-1769",
+doi="10.1007/s00138-009-0189-8",
+url="https://doi.org/10.1007/s00138-009-0189-8"
+}
+
+@article{Masato2000,
+  title={Development of Image Processing Technique for Detection of Tunnel Wall Deformation Using Continuously Scanned Image},
+  author={Masato UKAI},
+  journal={Quarterly Report of RTRI},
+  volume={41},
+  number={3},
+  pages={120-126},
+  year={2000},
+  doi={10.2219/rtriqr.41.120}
+}
+
+@article{SUSAN2017232,
+title = "Automatic texture defect detection using Gaussian mixture entropy modeling",
+journal = "Neurocomputing",
+volume = "239",
+pages = "232 - 237",
+year = "2017",
+issn = "0925-2312",
+doi = "https://doi.org/10.1016/j.neucom.2017.02.021",
+url = "http://www.sciencedirect.com/science/article/pii/S0925231217302916",
+author = "Seba Susan and Monika Sharma",
+keywords = "Gaussian mixture model, Non-extensive entropy with Gaussian gain, Texture defects, Sliding window approach, Texture regularity",
+abstract = "In this paper we propose a new unsupervised, automated texture defect detection that does not require any user-inputs and yields high accuracies at the same time. To achieve this end we use the non-extensive entropy with Gaussian gain as the regularity index, computed locally from texture patches through a sliding window approach. The optimum window size is determined by modeling the entropy values by a two-mode Gaussian mixture model and checking for the minimum entropy of the mode-probabilities. The outlier entropy values corresponding to defective areas are defined as those that exceed thrice the standard deviation, as is the norm in statistics. The result is automatic defect detection with no manual intervention. Empirical results on defective texture images from the Brodatz database provide accurate localization of the defect as compared to Chetverikov and Hanbury's maximal regularity method, which requires manual setting of threshold parameters for each type of texture despite of being a benchmark for texture defect detection."
+}
+
+@article{CEN20151206,
+title = "Defect inspection for TFT-LCD images based on the low-rank matrix reconstruction",
+journal = "Neurocomputing",
+volume = "149",
+pages = "1206 - 1215",
+year = "2015",
+issn = "0925-2312",
+doi = "https://doi.org/10.1016/j.neucom.2014.09.007",
+url = "http://www.sciencedirect.com/science/article/pii/S0925231214011631",
+author = "Yi-Gang Cen and Rui-Zhen Zhao and Li-Hui Cen and Li-Hong Cui and Zhen-Jiang Miao and Zhe Wei",
+keywords = "Defect inspection, Low-rank matrix reconstruction, LCDs, IALM, Adaptive parameter selection",
+abstract = "Surface defect inspection of TFT-LCD panels is a critical task in LCD manufacturing. In this paper, an automatic defect inspection method based on the low-rank matrix reconstruction is proposed. The textured background of the LCD image is a low-rank matrix and the foreground image with defects can be treated as a sparse matrix. By utilizing the Inexact Augmented Lagrange Multipliers (IALM) algorithm, the segmentation of a LCD image can be converted into the reconstruction of a low-rank matrix with a fraction of its entries arbitrarily corrupted. This low-rank matrix reconstruction problem can be exactly solved via convex optimization that minimizes a combination of the nuclear norm and the l1-norm. Also, adaptive parameter selection strategy is proposed by conducting deep analysis on the IALM algorithm, which improves the generality of the IALM algorithm for different defect types. Experiment results show that our inspection algorithm is robust for the defect shapes and types under different illumination conditions. The shapes and edges of defect areas in the LCD images can be well preserved and segmented from textured background by our detection algorithm."
+}
+
+@article{SONG2013858,
+title = "A noise robust method based on completed local binary patterns for hot-rolled steel strip surface defects",
+journal = "Applied Surface Science",
+volume = "285",
+pages = "858 - 864",
+year = "2013",
+issn = "0169-4332",
+doi = "https://doi.org/10.1016/j.apsusc.2013.09.002",
+url = "http://www.sciencedirect.com/science/article/pii/S0169433213016437",
+author = "Kechen Song and Yunhui Yan",
+keywords = "Surface defect, Automatic recognition, Adjacent evaluation, Local binary pattern",
+abstract = "Automatic recognition method for hot-rolled steel strip surface defects is important to the steel surface inspection system. In order to improve the recognition rate, a new, simple, yet robust feature descriptor against noise named the adjacent evaluation completed local binary patterns (AECLBPs) is proposed for defect recognition. In the proposed approach, an adjacent evaluation window which is around the neighbor is constructed to modify the threshold scheme of the completed local binary pattern (CLBP). Experimental results demonstrate that the proposed approach presents the performance of defect recognition under the influence of the feature variations of the intra-class changes, the illumination and grayscale changes. Even in the toughest situation with additive Gaussian noise, the AECLBP can still achieve the moderate recognition accuracy. In addition, the strategy of using adjacent evaluation window can also be used in other methods of local binary pattern (LBP) variants."
+}
+
+@Article{Chondronasios2016,
+author="Chondronasios, Apostolos
+and Popov, Ivan
+and Jordanov, Ivan",
+title="Feature selection for surface defect classification of extruded aluminum profiles",
+journal="The International Journal of Advanced Manufacturing Technology",
+year="2016",
+month="Mar",
+day="01",
+volume="83",
+number="1",
+pages="33--41",
+abstract="This research investigates detection and classification of two types of the surface defects in extruded aluminium profiles; blisters and scratches. An experimental system is used to capture images and appropriate statistical features from a novel technique based on gradient-only co-occurrence matrices (GOCM) are proposed to detect and classify three distinct classes; non-defective, blisters and scratches. The developed methodology makes use of the Sobel edge detector to obtain the gradient magnitude of the image (GOCM). A comparison is made between the statistical features extracted from the original image (GLCM) and those extracted from the gradient magnitude (GOCM). This paper describes in detail every step of the image processing with example pictures illustrating the methodology. The features extracted from the image processing are classified by a two-layer feed-forward artificial neural network. The artificial neural network training is tested using different combinations of statistical features with different topologies. Features are compared individually and grouped. Results are discussed, achieving up to 98.6 {\%} total testing accuracy.",
+issn="1433-3015",
+doi="10.1007/s00170-015-7514-3",
+url="https://doi.org/10.1007/s00170-015-7514-3"
+}
+
+@INPROCEEDINGS{6706920, 
+author={J. {Masci} and U. {Meier} and G. {Fricout} and J. {Schmidhuber}}, 
+booktitle={The 2013 International Joint Conference on Neural Networks (IJCNN)}, 
+title={Multi-scale pyramidal pooling network for generic steel defect classification}, 
+year={2013}, 
+volume={}, 
+number={}, 
+pages={1-8}, 
+keywords={feature extraction;image classification;inspection;neural nets;production engineering computing;steel industry;multiscale pyramidal pooling network;generic steel defect classification;pyramidal pooling layer;bag-of-features approaches;convolutional neural networks;computer vision methods;industrial steel defect classification problem;hierarchical bag-of-features extension;Feature extraction;Encoding;Vectors;Convolutional codes;Steel;Image coding;Benchmark testing}, 
+doi={10.1109/IJCNN.2013.6706920}, 
+ISSN={2161-4407}, 
+month={Aug},}
+
+@Article{Wang2018,
+author="Wang, Tian
+and Chen, Yang
+and Qiao, Meina
+and Snoussi, Hichem",
+title="A fast and robust convolutional neural network-based defect detection model in product quality control",
+journal="The International Journal of Advanced Manufacturing Technology",
+year="2018",
+month="Feb",
+day="01",
+volume="94",
+number="9",
+pages="3465--3471",
+abstract="The fast and robust automated quality visual inspection has received increasing attention in the product quality control for production efficiency. To effectively detect defects in products, many methods focus on the hand-crafted optical features. However, these methods tend to only work well under specified conditions and have many requirements for the input. So the work in this paper targets on building a deep model to solve this problem. The elaborately designed deep convolutional neural networks (CNN) proposed by us can automatically extract powerful features with less prior knowledge about the images for defect detection, while at the same time is robust to noise. We experimentally evaluate this CNN model on a benchmark dataset and achieve a fast detection result with a high accuracy, surpassing the state-of-the-art methods.",
+issn="1433-3015",
+doi="10.1007/s00170-017-0882-0",
+url="https://doi.org/10.1007/s00170-017-0882-0"
+}
+
+@Article{Lin2018,
+author="Lin, Hui
+and Li, Bin
+and Wang, Xinggang
+and Shu, Yufeng
+and Niu, Shuanglong",
+title="Automated defect inspection of LED chip using deep convolutional neural network",
+journal="Journal of Intelligent Manufacturing",
+year="2018",
+month="Mar",
+day="29",
+abstract="Defect inspection is a vital part of the production process to control the quality of LED chip. On the one hand, traditional methods are time-consuming, which rely on models badly and require rich operation experience. On the other hand, defect localization cannot be achieved by using traditional networks. To solve these problems, we achieve the application of convolutional neural network (CNN) for LED chip defect inspection. Built in the CNN, a class activation mapping technique is proposed to localize defect regions without using region-level human annotations. Further, LED chip datasets are collected for training the CNN. It is worth to emphasize that the chip defect classification and localization tasks are completed in a single CNN which is very fast and convenient. The proposed CNN based defect inspector named LEDNet achieves impressively high performance on the inspection of LED chip defects (line blemishes and scratch marks) with an inaccuracy of 5.04{\%}, localizing exact defect regions as well.",
+issn="1572-8145",
+doi="10.1007/s10845-018-1415-x",
+url="https://doi.org/10.1007/s10845-018-1415-x"
+}
+
+@INPROCEEDINGS{2018SPIE10615E0KX,
+   author = {{Xiao}, Z. and {Leng}, Y. and {Geng}, L. and {Xi}, J.},
+    title = "{Defect detection and classification of galvanized stamping parts based on fully convolution neural network}",
+booktitle = {Ninth International Conference on Graphic and Image Processing (ICGIP 2017)},
+     year = 2018,
+   series = {Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series},
+   volume = 10615,
+    month = apr,
+      eid = {106150K},
+    pages = {106150K},
+      doi = {10.1117/12.2303601},
+   adsurl = {http://adsabs.harvard.edu/abs/2018SPIE10615E..0KX},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{8126877, 
+author={J. {Chen} and Z. {Liu} and H. {Wang} and A. {Núñez} and Z. {Han}}, 
+journal={IEEE Transactions on Instrumentation and Measurement}, 
+title={Automatic Defect Detection of Fasteners on the Catenary Support Device Using Deep Convolutional Neural Network}, 
+year={2018}, 
+volume={67}, 
+number={2}, 
+pages={257-269}, 
+keywords={computer vision;convolution;feedforward neural nets;inspection;railway engineering;railways;vibrations;deep convolutional neural network;fasteners;catenary support device;automatic fastener defect detection;vibration;railway vehicles;high-speed electrified railways;operation safety;cost reduction;inspection vehicle cameras;human visual interpretation;vision-based method that;DCNN-based detection;sequential localization;Wuhan-Guangzhou high-speed railway line;Fasteners;Rail transportation;Feature extraction;Computer architecture;Cameras;Detectors;Automatic defect detection;catenary support device;deep convolutional neural network (DCNN);fastener;high-speed railway}, 
+doi={10.1109/TIM.2017.2775345}, 
+ISSN={0018-9456}, 
+month={Feb},}
+
+@ARTICLE{7864335, 
+author={R. {Ren} and T. {Hung} and K. C. {Tan}}, 
+journal={IEEE Transactions on Cybernetics}, 
+title={A Generic Deep-Learning-Based Approach for Automated Surface Inspection}, 
+year={2018}, 
+volume={48}, 
+number={3}, 
+pages={929-940}, 
+keywords={feature extraction;image classification;image segmentation;inspection;learning (artificial intelligence);production engineering computing;generic deep-learning;automated surface inspection;image patches;trained classifier;segmentation task;image classification;defect segmentation;Feature extraction;Training;Heating;Inspection;Surface morphology;Computer vision;Object recognition;Automated surface inspection (ASI);deep learning (DL);feature transferring;segmentation}, 
+doi={10.1109/TCYB.2017.2668395}, 
+ISSN={2168-2267}, 
+month={March},}
+
+
+@Article{app8091575,
+AUTHOR = {Tao, Xian and Zhang, Dapeng and Ma, Wenzhi and Liu, Xilong and Xu, De},
+TITLE = {Automatic Metallic Surface Defect Detection and Recognition with Convolutional Neural Networks},
+JOURNAL = {Applied Sciences},
+VOLUME = {8},
+YEAR = {2018},
+NUMBER = {9},
+ARTICLE-NUMBER = {1575},
+URL = {http://www.mdpi.com/2076-3417/8/9/1575},
+ISSN = {2076-3417},
+ABSTRACT = {Automatic metallic surface defect inspection has received increased attention in relation to the quality control of industrial products. Metallic defect detection is usually performed against complex industrial scenarios, presenting an interesting but challenging problem. Traditional methods are based on image processing or shallow machine learning techniques, but these can only detect defects under specific detection conditions, such as obvious defect contours with strong contrast and low noise, at certain scales, or under specific illumination conditions. This paper discusses the automatic detection of metallic defects with a twofold procedure that accurately localizes and classifies defects appearing in input images captured from real industrial environments. A novel cascaded autoencoder (CASAE) architecture is designed for segmenting and localizing defects. The cascading network transforms the input defect image into a pixel-wise prediction mask based on semantic segmentation. The defect regions of segmented results are classified into their specific classes via a compact convolutional neural network (CNN). Metallic defects under various conditions can be successfully detected using an industrial dataset. The experimental results demonstrate that this method meets the robustness and accuracy requirements for metallic defect detection. Meanwhile, it can also be extended to other detection applications.},
+DOI = {10.3390/app8091575}
+}
+
+@article{doi:10106108873801,
+author = {Myung Jin Chae  and Dulcy M. Abraham },
+title = {Neuro-Fuzzy Approaches for Sanitary Sewer Pipeline Condition Assessment},
+journal = {Journal of Computing in Civil Engineering},
+volume = {15},
+number = {1},
+pages = {4-14},
+year = {2001},
+doi = {10.1061/(ASCE)0887-3801(2001)15:1(4)}
+
+URL = {https://ascelibrary.org/doi/abs/10.1061/%28ASCE%290887-3801%282001%2915%3A1%284%29},
+eprint = {https://ascelibrary.org/doi/pdf/10.1061/%28ASCE%290887-3801%282001%2915%3A1%284%29}
+,
+    abstract = { Recent advances in optical sensors and computing technologies have led to the development of inspection systems for underground facilities such as water lines, sewer pipes, and telecommunication conduits. It is now possible for inspection technologies that require no human entry into underground structures to be fully automated, from data acquisition to data analysis, and eventually to condition assessment. This paper describes the development of an automated data interpretation system for sanitary sewer pipelines. The interpretation system obtains optical data from the Sewer Scanner and Evaluation Technology (SSET), which is known to be the current leading-edge technology in inspecting sanitary sewer pipelines. The proposed system utilizes artificial neural networks to recognize various types of defects in sanitary sewer pipelines. The framework of this system includes modification of digital images for preprocessing, image feature segmentation, utilization of multiple neural networks for feature pattern recognition, and the fusion of multiple neural networks via the use of fuzzy logic systems. }
+}
+
+@article{Guo2009,
+author = {Guo, W and Soibelman, Lucio and Garrett, James},
+year = {2009},
+month = {08},
+pages = {587-596},
+title = {Automated defect detection for sewer pipeline inspection and condition assessment},
+volume = {18},
+journal = {Automation in Construction},
+doi = {10.1016/j.autcon.2008.12.003}
+}
+
+@INPROCEEDINGS{647318, 
+author={A. {Bodnarova} and J. A. {Williams} and M. {Bennamoun} and K. K. {Kubik}}, 
+booktitle={TENCON '97 Brisbane - Australia. Proceedings of IEEE TENCON '97. IEEE Region 10 Annual Conference. Speech and Image Technologies for Computing and Telecommunications (Cat. No.97CH36162)}, 
+title={Optimal textural features for flaw detection in textile materials}, 
+year={1997}, 
+volume={1}, 
+number={}, 
+pages={307-310 vol.1}, 
+keywords={textile industry;flaw detection;quality control;image texture;optimisation;parameter estimation;matrix algebra;fibres;statistical analysis;optimal textural features;flaw detection;textile materials;quality control;defect identification;woven textile fabrics;texture description;spatial gray level dependence;optimal parameter selection;maximum textural information;/spl chi//sup 2/ significance test;elemental feature matrices;textile pattern defects;statistical approach;Computer vision;Textiles;Fabrics;Production;Image texture analysis;Space technology;Quality control;Testing;Manufacturing;Costs}, 
+doi={10.1109/TENCON.1997.647318}, 
+ISSN={}, 
+month={Dec},}
+
+@article{LATIFAMET2000543,
+title = "An efficient method for texture defect detection: sub-band domain co-occurrence matrices",
+journal = "Image and Vision Computing",
+volume = "18",
+number = "6",
+pages = "543 - 553",
+year = "2000",
+issn = "0262-8856",
+doi = "https://doi.org/10.1016/S0262-8856(99)00062-1",
+url = "http://www.sciencedirect.com/science/article/pii/S0262885699000621",
+author = "A. Latif-Amet and A. Ertüzün and A. Erçil",
+keywords = "Texture defect detection, Co-occurrence matrices, Wavelet filters",
+abstract = "In this paper, an efficient algorithm, which combines concepts from wavelet theory and co-occurrence matrices, is presented for detection of defects encountered in textile images. Detection of defects within the inspected texture is performed first by decomposing the gray level images into sub-bands, then by partitioning the textured image into non-overlapping sub-windows and extracting the co-occurrence features and finally by classifying each sub-window as defective or non-defective with a Mahalanobis distance classifier being trained on defect free samples a priori. The experimental results demonstrating the use of this algorithm for the visual inspection of textile products obtained from the real factory environment are also presented. Experiments show that focusing on a particular band with high discriminatory power improves the detection performance as well as increases the computational efficiency."
+}
+
+@article{BISSI2013838,
+title = "Automated defect detection in uniform and structured fabrics using Gabor filters and PCA",
+journal = "Journal of Visual Communication and Image Representation",
+volume = "24",
+number = "7",
+pages = "838 - 845",
+year = "2013",
+issn = "1047-3203",
+doi = "https://doi.org/10.1016/j.jvcir.2013.05.011",
+url = "http://www.sciencedirect.com/science/article/pii/S1047320313001119",
+author = "Lucia Bissi and Giuseppe Baruffa and Pisana Placidi and Elisa Ricci and Andrea Scorzoni and Paolo Valigi",
+keywords = "Automated textile inspection, Fabric defect detection, Gabor filters, Principa Component Analysis, TILDA, Manual defect annotation, Detection rate, False alarm rate",
+abstract = "This paper describes an algorithm for texture defect detection in uniform and structured fabrics, which has been tested on the TILDA image database. The proposed approach is structured in a feature extraction phase, which relies on a complex symmetric Gabor filter bank and Principal Component Analysis (PCA), and on a defect identification phase, which is based on the Euclidean norm of features and on the comparison with fabric type specific parameters. Our analysis is performed on a patch basis, instead of considering single pixels. The performance has been evaluated with uniformly textured fabrics and fabrics with visible texture and grid-like structures, using as reference defect locations identified by human observers. The results show that our algorithm outperforms previous approaches in most cases, achieving a detection rate of 98.8% and a false alarm rate as low as 0.20–0.37%, whereas for heavily structured yarns misdetection rate can be as low as 5%."
+}
+
+@article{Shahin1997,
+author = {Y. Shahin, M},
+year = {1997},
+month = {06},
+pages = {47},
+title = {Paver Asphalt Distress Manual}
+}
+
+@article{SINHA200647,
+title = "Segmentation of buried concrete pipe images",
+journal = "Automation in Construction",
+volume = "15",
+number = "1",
+pages = "47 - 57",
+year = "2006",
+issn = "0926-5805",
+doi = "https://doi.org/10.1016/j.autcon.2005.02.007",
+url = "http://www.sciencedirect.com/science/article/pii/S0926580505000464",
+author = "Sunil K. Sinha and Paul W. Fieguth",
+keywords = "Pipeline infrastructure, Automated inspection, Pipeline assessment, Image processing, Segmentation, Mathematical morphology",
+abstract = "The enormity of the problem of deteriorating pipeline infrastructure is widely apparent. Since a complete rebuilding of the piping system is not financially realistic, municipal and utility operators require the ability to monitor the condition of buried pipes. Thus, reliable pipeline assessment and management tools are necessary to develop long term cost effective maintenance, repair, and rehabilitation programs. In this paper a simple, robust and efficient image segmentation algorithm for the automated analysis of scanned underground pipe images is presented. The algorithm consists of image pre-processing followed by a sequence of morphological operations to accurately segment pipe cracks, holes, joints, laterals, and collapsed surfaces, a crucial step in the classification of defects in underground pipes. The proposed approach can be completely automated and has been tested on five hundred scanned images of buried concrete sewer pipes from major cities in North America."
+}
+
+@inproceedings{Moussa2011,
+author = {Moussa, Ghada and Hussain, Khaled},
+year = {2011},
+month = {07},
+pages = {},
+title = {A New Technique for Automatic Detection and Parameters Estimation of Pavement Crack},
+doi = {10.13140/2.1.3191.2001}
+}
+
+@inproceedings{Radopoulou2014,
+author = {Radopoulou, Stefania-Christina and Brilakis, Ioannis},
+year = {2014},
+month = {01},
+pages = {},
+title = {Improving Patch Distress Detection using Vision Tracking on Video Data}
+}
+
+@article{ABOUELELA20051435,
+title = "Automated vision system for localizing structural defects in textile fabrics",
+journal = "Pattern Recognition Letters",
+volume = "26",
+number = "10",
+pages = "1435 - 1443",
+year = "2005",
+issn = "0167-8655",
+doi = "https://doi.org/10.1016/j.patrec.2004.11.016",
+url = "http://www.sciencedirect.com/science/article/pii/S0167865504003794",
+author = "Ahmed Abouelela and Hazem M. Abbas and Hesham Eldeeb and Abdelmonem A. Wahdan and Salwa M. Nassar",
+keywords = "Texture segmentation, Textile inspection, Computer vision, Image processing, Textiles quality control, Structural textile defects",
+abstract = "Quality control is one of the basic issues in textile industry. Analysis of texture content in digital images plays an important role in the automated visual inspection of textile images to detect their defects. In this paper, a system for automated visual inspection of textiles is discussed. A detailed system configuration is presented and a fault detection algorithm is proposed. Industrial vision systems must operate in real-time, produce a low false alarm rate and be flexible to accommodate variations in inspection sites. This was the rationale behind developing a detection algorithm which employs simple statistical features (mean, variance, median). The intent was to utilize such features to make the calculations simple and fast for the system to be suitable for real-time applications. The performance of the system was evaluated on plain fabrics with different types of textile flaws. The results indicate that the system can detect flaws which vary drastically in physical dimension and nature with a very low false detection rate."
+}
+
+@INPROCEEDINGS{6287161, 
+author={V. {Jayashree} and S. {Subbaramn}}, 
+booktitle={2012 IEEE Control and System Graduate Research Colloquium}, 
+title={Hybrid Approach using correlation and morphological approaches for GFDD of plain weave fabric}, 
+year={2012}, 
+volume={}, 
+number={}, 
+pages={197-202}, 
+keywords={automatic optical inspection;fabrics;fast Fourier transforms;filtering theory;image matching;image segmentation;object detection;optical correlation;production engineering computing;GFDD;plain weave fabrics;morphological approach;correlation approach;grey fabric defect detection;suspected object detection;image detection;defect template;defect image;region-of-interest;FFT based correlation technique;image threshold;structuring element;filtering;false alarm rate reduction;FAR reduction;defect search algorithm;overall detection accuracy;Fabrics;Weaving;Correlation;Filling;Yarn;Convolution;Control systems;Correlation;Template;Texture Periodicity;Morphological;Structuring Element;Hybrid Approach;GFDD}, 
+doi={10.1109/ICSGRC.2012.6287161}, 
+ISSN={}, 
+month={July},}
+
+@INPROCEEDINGS{7334956, 
+author={Z. {Jikun} and Y. {Kewen}}, 
+booktitle={2015 7th International Conference on Intelligent Human-Machine Systems and Cybernetics}, 
+title={The Criteria of Choosing the Optimal Gabor Filter and Defect Detection Using the Optimal Gabor Filter}, 
+year={2015}, 
+volume={2}, 
+number={}, 
+pages={224-227}, 
+keywords={clothing;eigenvalues and eigenfunctions;frequency-domain analysis;Gabor filters;glass fibres;object detection;production engineering computing;optimal Gabor filter;glass fiber clothes;defect detection;direction templates;optimal orientation;frequency domain analysis;eigen value perturbation;scale making disturbance coefficient;Fabrics;Eigenvalues and eigenfunctions;Frequency-domain analysis;Image segmentation;Pattern recognition;Symmetric matrices;eigenvalue perturbation;disturbance coefficient;frequency domain;the optimal Gabor filter;detect defection}, 
+doi={10.1109/IHMSC.2015.242}, 
+ISSN={}, 
+month={Aug},}
+
+@article{Halimi2012,
+author = {Halimi, A and El kouraychi, A and Abdenbi, Bouzid and Roukhe, Ahmed},
+year = {2012},
+month = {01},
+pages = {1-16},
+title = {Defects detection and extraction in textile imageries using Mathematical Morphology and geometrical features},
+volume = {1},
+journal = {Journal of Signal Processing Theory and Applications},
+doi = {10.7726/jspta.2012.1001}
+}
+
+@article{TABASSIAN20115259,
+title = "Knitted fabric defect classification for uncertain labels based on Dempster–Shafer theory of evidence",
+journal = "Expert Systems with Applications",
+volume = "38",
+number = "5",
+pages = "5259 - 5267",
+year = "2011",
+issn = "0957-4174",
+doi = "https://doi.org/10.1016/j.eswa.2010.10.032",
+url = "http://www.sciencedirect.com/science/article/pii/S0957417410011760",
+author = "Mahdi Tabassian and Reza Ghaderi and Reza Ebrahimpour",
+keywords = "Theory of evidence, Uncertainty in labels, Wavelet transform, -nearest neighbors, MLP neural network, Circular knitted fabric defect",
+abstract = "A new approach for classification of circular knitted fabric defect is proposed which is based on accepting uncertainty in labels of the learning data. In the basic classification methodologies it is assumed that correct labels are assigned to samples and these approaches concentrate on the strength of categorization. However, there are some classification problems in which a considerable amount of uncertainty exists in the labels of samples. The core of innovation in this research has been usage of the uncertain information of labeling and their combination with the Dempster–Shafer theory of evidence. The experimental results show the robustness of the proposed method in comparison with usual classification techniques of supervised learning where the certain labels are assigned to training data."
+}
+
+@INPROCEEDINGS{6720367, 
+author={Z. {Kang} and C. {Yuan} and Q. {Yang}}, 
+booktitle={2013 IEEE International Conference on Information and Automation (ICIA)}, 
+title={The fabric defect detection technology based on wavelet transform and neural network convergence}, 
+year={2013}, 
+volume={}, 
+number={}, 
+pages={597-601}, 
+keywords={automatic optical inspection;fabrics;flaw detection;neural nets;production engineering computing;time-frequency analysis;wavelet transforms;fabric defect detection technology;wavelet transform;neural network convergence;detection method;time-frequency localization characteristics;multiscale image analysis capability;fabric defect extraction;neural network technology;rapid detection;Fabrics;Frequency-domain analysis;Wavelet transforms;Multiresolution analysis;Neural networks;Gabor filters;Defect Detection;Wavelet Transform;Neural Network;Rapid detection}, 
+doi={10.1109/ICInfA.2013.6720367}, 
+ISSN={}, 
+month={Aug},}
+
+@Article{Jahanshahi2013,
+author="Jahanshahi, Mohammad R.
+and Masri, Sami F.
+and Padgett, Curtis W.
+and Sukhatme, Gaurav S.",
+title="An innovative methodology for detection and quantification of cracks through incorporation of depth perception",
+journal="Machine Vision and Applications",
+year="2013",
+month="Feb",
+day="01",
+volume="24",
+number="2",
+pages="227--241",
+abstract="Visual inspection of structures is a highly qualitative method in which inspectors visually assess a structure's condition. If a region is inaccessible, binoculars must be used to detect and characterize defects. Although several Non-Destructive Testing methods have been proposed for inspection purposes, they are nonadaptive and cannot quantify crack thickness reliably. In this paper, a contact-less remote-sensing crack detection and quantification methodology based on 3D scene reconstruction (computer vision), image processing, and pattern recognition concepts is introduced. The proposed approach utilizes depth perception to detect cracks and quantify their thickness, thereby giving a robotic inspection system the ability to analyze images captured from any distance and using any focal length or resolution. This unique adaptive feature is especially useful for incorporating mobile systems, such as unmanned aerial vehicles, into structural inspection methods since it would allow inaccessible regions to be properly inspected for cracks. Guidelines are presented for optimizing the acquisition and processing of images, thereby enhancing the quality and reliability of the damage detection approach and allowing the capture of even the slightest cracks (e.g., detection of 0.1 mm cracks from a distance of 20 m), which are routinely encountered in realistic field applications where the camera-object distance and image contrast are not controllable.",
+issn="1432-1769",
+doi="10.1007/s00138-011-0394-0",
+url="https://doi.org/10.1007/s00138-011-0394-0"
+}
+
+@ARTICLE{1232300, 
+author={O. {Duran} and K. {Althoefer} and L. D. {Seneviratne}}, 
+journal={IEEE/ASME Transactions on Mechatronics}, 
+title={Pipe inspection using a laser-based transducer and automated analysis techniques}, 
+year={2003}, 
+volume={8}, 
+number={3}, 
+pages={401-409}, 
+keywords={CCD image sensors;automatic optical inspection;condition monitoring;multilayer perceptrons;image processing;water treatment;flaw detection;measurement by laser beam;intelligent sensors;closed circuit television;mechatronics;automated pipe inspection;laser-based transducer;automated analysis techniques;sensing methodology;waste pipes;drains;intelligent sensing approach;automated pipe-condition assessment;low-cost lighting profiler;camera;image acquisition;intensity variations;image data analysis;differential processing;noise tolerant algorithms;harsh environments;small fault detection;artificial neural networks;defective areas;ring profiler;sewer inspection;multilayer perceptron;pre-calibrated CCD camera;Inspection;Transducers;Cameras;TV;Automatic control;Control systems;Video recording;Humans;Data mining;Image analysis}, 
+doi={10.1109/TMECH.2003.816809}, 
+ISSN={1083-4435}, 
+month={Sep.},}
+
+@article{Li2009,
+	doi = {10.1088/0957-0233/21/1/015702},
+	url = {https://doi.org/10.1088%2F0957-0233%2F21%2F1%2F015702},
+	year = 2009,
+	month = {nov},
+	publisher = {{IOP} Publishing},
+	volume = {21},
+	number = {1},
+	pages = {015702},
+	author = {Qingguang Li and Ming Yao and Xun Yao and Bugao Xu},
+	title = {A real-time 3D scanning system for pavement distortion inspection},
+	journal = {Measurement Science and Technology},
+	abstract = {Pavement distortions, such as rutting and shoving, are the common pavement distress problems that need to be inspected and repaired in a timely manner to ensure ride quality and traffic safety. This paper introduces a real-time, low-cost inspection system devoted to detecting these distress features using high-speed 3D transverse scanning techniques. The detection principle is the dynamic generation and characterization of the 3D pavement profile based on structured light triangulation. To improve the accuracy of the system, a multi-view coplanar scheme is employed in the calibration procedure so that more feature points can be used and distributed across the field of view of the camera. A sub-pixel line extraction method is applied for the laser stripe location, which includes filtering, edge detection and spline interpolation. The pavement transverse profile is then generated from the laser stripe curve and approximated by line segments. The second-order derivatives of the segment endpoints are used to identify the feature points of possible distortions. The system can output the real-time measurements and 3D visualization of rutting and shoving distress in a scanned pavement.}
+}
+
+@inproceedings{Karuppuswamy2000,
+author = {Karuppuswamy, Jaiganesh and Selvaraj, Vishnuvardhanaraj and Hall, Ernest},
+year = {2000},
+month = {11},
+pages = {},
+title = {Detection and Avoidance of Simulated Potholes in Autonomous Vehicle Navigation in an Unstructured Environment},
+doi = {10.1117/12.403788}
+}
+
+@article{doi:10106119435487,
+author = {Mohammad R. Jahanshahi  and Farrokh Jazizadeh  and Sami F. Masri  and Burcin Becerik-Gerber },
+title = {Unsupervised Approach for Autonomous Pavement-Defect Detection and Quantification Using an Inexpensive Depth Sensor},
+journal = {Journal of Computing in Civil Engineering},
+volume = {27},
+number = {6},
+pages = {743-754},
+year = {2013},
+doi = {10.1061/(ASCE)CP.1943-5487.0000245}
+
+URL = {https://ascelibrary.org/doi/abs/10.1061/%28ASCE%29CP.1943-5487.0000245},
+eprint = {https://ascelibrary.org/doi/pdf/10.1061/%28ASCE%29CP.1943-5487.0000245}
+,
+    abstract = { Current pavement condition–assessment procedures are extensively time consuming and laborious; in addition, these approaches pose safety threats to the personnel involved in the process. In this study, a RGB-D sensor is used to detect and quantify defects in pavements. This sensor system consists of a RGB color image, and an infrared projector and a camera that act as a depth sensor. An approach, which does not need any training, is proposed to interpret the data sensed by this inexpensive sensor. This system has the potential to be used for autonomous cost-effective assessment of road-surface conditions. Various road conditions including patching, cracks, and potholes are autonomously detected and, most importantly, quantified, using the proposed approach. Several field experiments have been carried out to evaluate the capabilities, as well as the limitations of the proposed system. The global positioning system information is incorporated with the proposed system to localize the detected defects. This approach has the potential to be deployed as a supplementary sensor system in pavement surface–assessment vehicles and reduce the operation cost. }
+}
+
+@incollection{NIPS2012_4824,
+title = {ImageNet Classification with Deep Convolutional Neural Networks},
+author = {Alex Krizhevsky and Sutskever, Ilya and Hinton, Geoffrey E},
+booktitle = {Advances in Neural Information Processing Systems 25},
+editor = {F. Pereira and C. J. C. Burges and L. Bottou and K. Q. Weinberger},
+pages = {1097--1105},
+year = {2012},
+publisher = {Curran Associates, Inc.},
+url = {http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf}
+}
+
+@InProceedings{Simonyan15,
+  author       = "Simonyan, K. and Zisserman, A.",
+  title        = "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+  booktitle    = "International Conference on Learning Representations",
+  year         = "2015",
+}
+
+@article{Redmon2018YOLOv3AI,
+  title={YOLOv3: An Incremental Improvement},
+  author={Joseph Redmon and Ali Farhadi},
+  journal={CoRR},
+  year={2018},
+  volume={abs/1804.02767}
+}
+
+@misc{duan2019centernet,
+  abstract = {In object detection, keypoint-based approaches often suffer a large number of
+incorrect object bounding boxes, arguably due to the lack of an additional look
+into the cropped regions. This paper presents an efficient solution which
+explores the visual patterns within each cropped region with minimal costs. We
+build our framework upon a representative one-stage keypoint-based detector
+named CornerNet. Our approach, named CenterNet, detects each object as a
+triplet, rather than a pair, of keypoints, which improves both precision and
+recall. Accordingly, we design two customized modules named cascade corner
+pooling and center pooling, which play the roles of enriching information
+collected by both top-left and bottom-right corners and providing more
+recognizable information at the central regions, respectively. On the MS-COCO
+dataset, CenterNet achieves an AP of 47.0%, which outperforms all existing
+one-stage detectors by at least 4.9%. Meanwhile, with a faster inference speed,
+CenterNet demonstrates quite comparable performance to the top-ranked two-stage
+detectors. Code is available at https://github.com/Duankaiwen/CenterNet.},
+  added-at = {2019-05-09T08:53:05.000+0200},
+  author = {Duan, Kaiwen and Bai, Song and Xie, Lingxi and Qi, Honggang and Huang, Qingming and Tian, Qi},
+  biburl = {https://www.bibsonomy.org/bibtex/2eaf9e599e276b3e3de777f244d1c3c29/nmatsuk},
+  description = {CenterNet: Keypoint Triplets for Object Detection},
+  interhash = {2359a980f5b70d2c19c87a248160cb4b},
+  intrahash = {eaf9e599e276b3e3de777f244d1c3c29},
+  keywords = {cornernet detection head loss},
+  note = {cite arxiv:1904.08189Comment: 10 pages (including 2 pages of References), 7 figures, 5 tables},
+  timestamp = {2019-05-09T08:53:05.000+0200},
+  title = {CenterNet: Keypoint Triplets for Object Detection},
+  url = {http://arxiv.org/abs/1904.08189},
+  year = 2019
+}
+
+
+@article{DBLP:journals/corr/abs-1808-01244,
+  author    = {Hei Law and
+               Jia Deng},
+  title     = {CornerNet: Detecting Objects as Paired Keypoints},
+  journal   = {CoRR},
+  volume    = {abs/1808.01244},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1808.01244},
+  archivePrefix = {arXiv},
+  eprint    = {1808.01244},
+  timestamp = {Sun, 02 Sep 2018 15:01:55 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1808-01244},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{DBLP:journals/corr/abs-1904-08900,
+  author    = {Hei Law and
+               Yun Teng and
+               Olga Russakovsky and
+               Jia Deng},
+  title     = {CornerNet-Lite: Efficient Keypoint Based Object Detection},
+  journal   = {CoRR},
+  volume    = {abs/1904.08900},
+  year      = {2019},
+  url       = {http://arxiv.org/abs/1904.08900},
+  archivePrefix = {arXiv},
+  eprint    = {1904.08900},
+  timestamp = {Fri, 26 Apr 2019 13:18:53 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1904-08900},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{DBLP:journals/corr/IandolaMAHDK16,
+  author    = {Forrest N. Iandola and
+               Matthew W. Moskewicz and
+               Khalid Ashraf and
+               Song Han and
+               William J. Dally and
+               Kurt Keutzer},
+  title     = {SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and {\textless}1MB
+               model size},
+  journal   = {CoRR},
+  volume    = {abs/1602.07360},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1602.07360},
+  archivePrefix = {arXiv},
+  eprint    = {1602.07360},
+  timestamp = {Mon, 13 Aug 2018 16:46:12 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/IandolaMAHDK16},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{DBLP:journals/corr/HowardZCKWWAA17,
+  author    = {Andrew G. Howard and
+               Menglong Zhu and
+               Bo Chen and
+               Dmitry Kalenichenko and
+               Weijun Wang and
+               Tobias Weyand and
+               Marco Andreetto and
+               Hartwig Adam},
+  title     = {MobileNets: Efficient Convolutional Neural Networks for Mobile Vision
+               Applications},
+  journal   = {CoRR},
+  volume    = {abs/1704.04861},
+  year      = {2017},
+  url       = {http://arxiv.org/abs/1704.04861},
+  archivePrefix = {arXiv},
+  eprint    = {1704.04861},
+  timestamp = {Mon, 13 Aug 2018 16:46:35 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/HowardZCKWWAA17},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{DBLP:journals/corr/NewellYD16,
+  author    = {Alejandro Newell and
+               Kaiyu Yang and
+               Jia Deng},
+  title     = {Stacked Hourglass Networks for Human Pose Estimation},
+  journal   = {CoRR},
+  volume    = {abs/1603.06937},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1603.06937},
+  archivePrefix = {arXiv},
+  eprint    = {1603.06937},
+  timestamp = {Mon, 13 Aug 2018 16:49:02 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/NewellYD16},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{newell2016stacked,
+  title={Stacked hourglass networks for human pose estimation},
+  author={Newell, Alejandro and Yang, Kaiyu and Deng, Jia},
+  booktitle={European Conference on Computer Vision},
+  pages={483--499},
+  year={2016},
+  organization={Springer}
+}
+
+@article{yu2015multi,
+  title={Multi-scale context aggregation by dilated convolutions},
+  author={Yu, Fisher and Koltun, Vladlen},
+  journal={arXiv preprint arXiv:1511.07122},
+  year={2015}
+}

@@ -14,22 +14,22 @@
 	\fancyhf{} 
 	\renewcommand{\headrulewidth}{0 pt}
 	\fancyfoot[C]{\song\xiaowu~\thepage~}
-} 
+}  
 
 %%%%%%%%%%    封面    %%%%%%%%%%
-% \include{include/cover}
+\include{include/cover}
 
 %%%%%%%%%%   任务书   %%%%%%%%%%
-% \includepdf[pages=-]{include/task.pdf}
+\includepdf[pages=-]{include/task.pdf}
 
 %%%%%%%%%%  开题报告  %%%%%%%%%%
-% \includepdf[pages=-]{include/open.pdf}
+\includepdf[pages=-]{include/open.pdf}
  
 %%%%%%%%%%    摘要    %%%%%%%%%%
 \include{include/abstract} 
 
 \setcounter{page}{1}							% 单独从 1 开始编页码
-%\pagenumbering{arabic}
+\pagenumbering{arabic}
 %%%%%%%%%%    目录    %%%%%%%%%%
 \makecontents
 
@@ -45,6 +45,6 @@
 \titleformat{\chapter}{\centering\sihao\hei}{\chaptername}{2em}{} % 标题四号黑体居中
 \include{appendix/paperInEnglish}				% 外文资料
 \include{appendix/paperInChinese}				% 中文译文
-% \include{appendix/acknowledgements}				% 致谢	
+\include{appendix/acknowledgements}				% 致谢	
 \clearpage 
 \end{document}									% 结束全文
